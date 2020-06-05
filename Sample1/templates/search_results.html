@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search_serults</title>
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='css/style1.css') }}">
+</head>
+<body>
+<div class="search_result">
+
+    <div class="sheader">
+        <table>
+            <tr>
+                <td> <img src="static/img/coronavirus.jpg" class="flag" width=100 hight=50/></td>
+
+                <td> <h2> Live updates on Covid-19 outbreak for the date {{kdate}} </h2> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="sbody">
+
+
+       {% for element in data %}
+
+        <div class="card">
+
+<div class="card-body">
+    <img src={{element.flag}} width=50 hight=25>
+
+                    <h3> {{element.country}}</h3>
+    <p> Total Confirmed Cases  - {{element.cases}} </p>
+    <p> Total Deaths           - {{element.deaths}} </p>
+    <p> Total Recovery         - {{element.recovered}} </p>
+
+</div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='css/style.css') }}">
+    <script>
+        body {align-items: center;display: flex;flex-direction: column;justify-content: center;}
+
+    </script>
+</head>
+<body>
+<div >
+    <img src="static/img/coronavirus.jpg" class="img_cover" />
+    <form action="/corona_search" method="POST">
+        <div class="contain">
+            <input type="text" id="k" name="kdate" placeholder="&#128567  Enter Date YYYY-MM-DD" class="search_input">
+
+<!--        <button type="submit" > &#128567 </button>-->
+        </div>
+
+
+
+</form>
+</div>
+
+
+
+
+</body>
+</html>
